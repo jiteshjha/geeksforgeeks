@@ -1,2 +1,3 @@
 # geeksforgeeks
-##My Solutions for problems on geeksforgeeks
+
+My solutions for problems on geeksforgeeks.org
