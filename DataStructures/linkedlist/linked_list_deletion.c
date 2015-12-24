@@ -76,7 +76,6 @@ NODEPTR deleteNodePosition(NODEPTR head, int pos) {
   prev -> next = traverse -> next;
   free(traverse);
   return head;
-
 }
 int main() {
   NODEPTR head = NULL;
