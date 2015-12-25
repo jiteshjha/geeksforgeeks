@@ -48,6 +48,16 @@ NODEPTR reverse(NODEPTR head) {
   head = prev;
   return head;
 }
+
+NODEPTR reverseRecur(NODEPTR curr, NODEPTR prev) {
+  if(curr -> next == NULL) {
+    curr -> next = prev;
+    return curr;
+  }
+  NODEPTR next = curr -> next;
+  curr -> next = prev;
+  reverseRecur(next, curr);
+}
 int main() {
   NODEPTR head = NULL;
 
@@ -57,7 +67,7 @@ int main() {
   head = push(head, 5);
   head = push(head, 6);
   display(head);
-  head = reverse(head);
+  head = reverseRecur(head, NULL);
   display(head);
   return 0;
 }
