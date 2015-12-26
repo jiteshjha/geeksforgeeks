@@ -45,9 +45,15 @@ NODEPTR reversek(NODEPTR head, int k) {
     curr = next;
     i++;
   }
-
-  if(next != NULL)
-    head -> next = reversek(next, k);
+  if(curr != NULL)
+    head -> next = curr;
+  i = 0;
+  while(curr != NULL && i < k - 1) {
+    curr = curr -> next;
+    i++;
+  }
+  if(curr != NULL)
+    curr -> next = reversek(curr -> next, k);
   return prev;
 
 }
@@ -57,8 +63,12 @@ int main() {
   head = push(head, 2);
   head = push(head, 3);
   head = push(head, 4);
-  //head = push(head, 5);
-  //head = push(head, 6);
+  head = push(head, 5);
+  head = push(head, 6);
+  head = push(head, 3);
+  head = push(head, 4);
+  head = push(head, 5);
+  head = push(head, 6);
   display(head);
   printf("\n");
   head = reversek(head, 3);
