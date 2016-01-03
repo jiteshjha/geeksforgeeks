@@ -54,7 +54,7 @@ int main() {
 
   head = push(head, 'a');
   head = push(head, 'c');
-  head = push(head, 'a');
+  head = push(head, 'd');
 
   head1 = push(head1, 'b');
   head1 = push(head1, 'b');
