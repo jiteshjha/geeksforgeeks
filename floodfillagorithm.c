@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<stdlib.h>
 void floodfill(int arr[][6], int a, int b, int prevC, int newC) {
 	
 	if(!(a >= 0 || a <= 5 || b >= 0 || b <= 5))
